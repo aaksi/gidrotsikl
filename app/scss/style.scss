@@ -1,1 +1,280 @@
+@import "vars";
+@import "fonts";
 @import "global";
+
+.header{
+    &__top-inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 122px;
+        font-weight: 700;
+    }
+    .menu__item{
+        display: inline-block;
+        font-size: 20px;
+
+        & + .menu__item{
+            margin-left: 50px;
+        }
+    }
+    &__box{
+        display: flex;
+        
+    }
+    &__address{
+        margin-right: 60px;
+        width: 265px;
+        padding-left: 30px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url('../images/icons/marker-address.svg');
+            width: 30px;
+            height: 30px;
+            left: 0;
+            top: -8px;
+        }
+    }
+    .user__list{
+        margin-right: 15px;
+    }
+    .user-list__item{
+        display: inline-block;
+        padding-right: 10px;
+    }
+    .basket{
+        position: relative;
+    }
+    .basket__num{
+        position: absolute;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 20px;
+        width: 20px;
+        height: 20px;
+        color: #fff;
+        background-color: $blu;
+        border-radius: 50%;
+        text-align: center;
+        right: -13px;
+        bottom: -3px;
+
+    }
+    &__bottom{
+        margin-bottom: 78px;
+    }
+    .menu-categories{
+        background-color: $base;
+        min-height: 53px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-transform: capitalize;
+
+    }
+    .menu-categories__item{
+
+    }
+    .menu-categories__link{
+        transition: all .3s;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        padding: 15px 0 14px;
+        position: relative;
+        color: $text;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 0%;
+            left: auto;
+            right: 0;
+            bottom: -3px;
+            background-color: $blu;
+            height: 3px;
+            transition: all .3s;
+        }
+        &:hover{
+            // border-bottom: 3px solid $blu;
+            color: #000;
+            transition: all .3s;
+
+            &::before{
+                left: 0;
+                width: 100%;
+                right: auto;
+                transition: all .3s;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+.banner-section{
+   
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        min-width: 0;
+
+    }
+    &__slider{
+       max-width:  870px; 
+    }
+    .banner-section__slider-img{
+        object-fit: cover;
+        min-height: 400px;
+    }
+    .slick-slider{
+        margin-bottom: -5px;
+    }
+    .banner-section__slider-btn{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        z-index: 5;
+        &--left{
+            left: 20px;
+        }
+        &--right{
+            right: 20px;
+        }
+    }
+    .slick-dots{
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        text-align: center;
+      
+        li{
+            display: inline-block;
+            padding: 0 5px;
+            
+        }
+        button{
+            padding: 0;
+            font-size: 0;
+            line-height: 0;
+            width: 11px;
+            height: 11px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            background-color: transparent;
+        }
+        .slick-active{
+            button{
+
+                background-color: #fff;
+            }
+        }
+       
+    }
+    .sale-item{
+        width: 265px;
+        text-align: center;
+        border: 1px solid #CDCDCD;
+        box-sizing: border-box;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // align-items: flex-start;
+        // align-items: center;
+        // display: block;
+    }
+    .sale-item__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .sale-item__info{
+        color: #fff;
+        text-transform: uppercase;
+        background-color: $blu;
+        padding: 8px 20px ;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.1em;
+
+    }
+
+    .sale-item__price{
+        text-align: right;
+    }
+    .price{
+        position: relative;
+        font-family: 'Barlow', sans-serif;
+    }
+    .sale-item__price-new{
+        font-weight: bold;
+        color: $blu;
+        font-size: 27px;
+        line-height: 32px;
+        margin-right: 7px;
+        padding-right: 20px;
+        &::after{
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 8px;
+            background-image: url('../images/icons/icon-price.svg');
+            width: 15px;
+            height: 18px;
+        }
+    }
+    .sale-item__price-old{
+        color: $grey;
+        font-size: 14px;
+        line-height: 17px;
+        margin-right: 12px;
+        // padding-right: 17px;
+        background-image: url('../images/icons/old-line.svg');
+        display: inline-block;
+        padding: 2px 5px ;
+        background-repeat: no-repeat;
+        &::after{
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 5px;
+            background-image: url('../images/icons/icon-price-old.svg');
+            width: 8px;
+            height: 10px;
+        }
+    }
+
+    .sale-item__img{
+        object-fit: contain ;
+        margin: 0 auto;
+    }
+    .sale-item__title{
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 700;
+        margin-bottom: 7px;
+    }
+    .sale-item__footer{
+        background-color: $base;
+        padding: 28px 20px 25px;
+        font-size: 18px;
+        line-height: 21px;
+        span{
+            color: $blu;
+            display: block;
+            font-family: 'Barlow', sans-serif;
+            font-weight: 700;
+        }
+    }
+}

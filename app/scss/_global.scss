@@ -1,10 +1,18 @@
 html{
     box-sizing: border-box;
 }
-html,
+// html,
+// body{
+//     position: relative;
+//     overflow-x: hidden;
+// }
 body{
-    position: relative;
-    overflow-x: hidden;
+    color: $text;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
 }
 *,
 *::before,
@@ -12,6 +20,7 @@ body{
     box-sizing: inherit;
 }
 ul,
+ol,
 li{
     margin: 0;
     padding: 0;
@@ -27,6 +36,12 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6,
+p{
     margin: 0;
+}
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
