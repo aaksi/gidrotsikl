@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "@rateyo/jquery": "^3.0.0-alpha.2",
     "browser-sync": "^2.26.14",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -19,7 +20,9 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify-es": "^2.0.0",
     "imagemin": "^7.0.1",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.5.1",
+    "jquery-form-styler": "^2.0.2",
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1"
   },
